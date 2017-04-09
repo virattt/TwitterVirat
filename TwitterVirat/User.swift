@@ -17,6 +17,11 @@ class User: NSObject {
     var screenname: String?
     var tagline: String?
     var profileUrl: URL?
+    var profileBackgroundUrl: URL?
+    var followersCount: Int64 = 0
+    var followingCount: Int64 = 0
+    var tweetsCount: Int64 = 0
+    
     
     init(dictionary: NSDictionary) {
         self.dictionary = dictionary
@@ -24,10 +29,19 @@ class User: NSObject {
         name = dictionary["name"] as? String
         screenname = dictionary["screen_name"] as? String
         tagline = dictionary["description"] as? String
+        followersCount = dictionary["followers_count"] as! Int64
+        followingCount = dictionary["friends_count"] as! Int64
+        tweetsCount = dictionary["statuses_count"] as! Int64
+        
 
         let profileURlString = dictionary["profile_image_url_https"] as! String?
         if let profileURlString = profileURlString {
             profileUrl = URL(string: profileURlString)
+        }
+        
+        let profileBackgroundUrlString = dictionary["profile_background_image_url"] as! String?
+        if let profileBackgroundUrlString = profileBackgroundUrlString {
+            profileBackgroundUrl = URL(string: profileBackgroundUrlString)
         }
     }
     
@@ -49,6 +63,7 @@ class User: NSObject {
             return _currentUser
         }
         set(user) {
+            _currentUser = user
             let defaults = UserDefaults.standard
             
             if let user = user {
