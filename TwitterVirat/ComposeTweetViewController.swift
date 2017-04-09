@@ -16,7 +16,7 @@ class ComposeTweetViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         userNameLabel.text = User.currentUser!.name
-        userScreenNameLabel.text = "@\(User.currentUser!.screenname)"
+        userScreenNameLabel.text = "@\(User.currentUser!.screenname!)"
         userImageView.setImageWith(User.currentUser!.profileUrl!)
 
         // Do any additional setup after loading the view.

@@ -33,8 +33,6 @@ class TweetViewController: UIViewController {
         let formatter = DateFormatter()
         formatter.dateFormat = "MM/dd/yy, mm:ss Z"
         dateLabel.text = formatter.string(from: tweet.timestamp!)
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {

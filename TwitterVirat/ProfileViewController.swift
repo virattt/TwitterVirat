@@ -22,6 +22,9 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        if (user == nil) {
+            user = User.currentUser
+        }
         backgroundImageView.setImageWith(user!.profileBackgroundUrl!)
         profileImageView.setImageWith(user!.profileUrl!)
         nameLabel.text = user!.name!
