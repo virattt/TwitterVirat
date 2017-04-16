@@ -9,13 +9,8 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
-    @IBOutlet weak var backgroundImageView: UIImageView!
-    @IBOutlet weak var profileImageView: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var screenNameLabel: UILabel!
-    @IBOutlet weak var tweetCountLabel: UILabel!
-    @IBOutlet weak var followingCountLabel: UILabel!
-    @IBOutlet weak var followersCountLabel: UILabel!
+    
+    @IBOutlet weak var profileView: ProfileView!
     
     var user: User?
     
@@ -25,13 +20,14 @@ class ProfileViewController: UIViewController {
         if (user == nil) {
             user = User.currentUser
         }
-        backgroundImageView.setImageWith(user!.profileBackgroundUrl!)
-        profileImageView.setImageWith(user!.profileUrl!)
-        nameLabel.text = user!.name!
-        screenNameLabel.text = "@\(user!.screenname!)"
-        tweetCountLabel.text = String(user!.tweetsCount)
-        followingCountLabel.text = String(user!.followingCount)
-        followersCountLabel.text = String(user!.followersCount)
+        
+        profileView.backgroundImageView.setImageWith(user!.profileBackgroundUrl!)
+        profileView.profileImageView.setImageWith(user!.profileUrl!)
+        profileView.nameLabel.text = user!.name!
+        profileView.screenNameLabel.text = "@\(user!.screenname!)"
+        profileView.tweetsLabel.text = String(user!.tweetsCount)
+        profileView.followingLabel.text = String(user!.followingCount)
+        profileView.followersLabel.text = String(user!.followersCount)
     }
 
     override func didReceiveMemoryWarning() {

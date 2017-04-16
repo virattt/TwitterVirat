@@ -25,6 +25,8 @@
 		4A553BD21E98861600222A62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A553BD01E98861600222A62 /* LaunchScreen.storyboard */; };
 		4A553BDD1E98861600222A62 /* TwitterViratTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A553BDC1E98861600222A62 /* TwitterViratTests.swift */; };
 		4A553BE81E98861600222A62 /* TwitterViratUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A553BE71E98861600222A62 /* TwitterViratUITests.swift */; };
+		4A97E8611EA406470069E328 /* ProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A97E8601EA406470069E328 /* ProfileView.xib */; };
+		4A97E8631EA406A60069E328 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A97E8621EA406A60069E328 /* ProfileView.swift */; };
 		4AE4987D1E9888CB002F4586 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE4987C1E9888CB002F4586 /* LoginViewController.swift */; };
 		5D5F780FDC6DF0BCF2D52DAC /* Pods_TwitterViratTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 662BABF127B5F1BF573D4B44 /* Pods_TwitterViratTests.framework */; };
 		70778CF9D33F7FDFDF193D4D /* Pods_TwitterViratUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B5BB6F068B0C495A3AB3C2D /* Pods_TwitterViratUITests.framework */; };
@@ -76,6 +78,8 @@
 		4A553BE31E98861600222A62 /* TwitterViratUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwitterViratUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A553BE71E98861600222A62 /* TwitterViratUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterViratUITests.swift; sourceTree = "<group>"; };
 		4A553BE91E98861600222A62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A97E8601EA406470069E328 /* ProfileView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileView.xib; sourceTree = "<group>"; };
+		4A97E8621EA406A60069E328 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		4AE4987C1E9888CB002F4586 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		662BABF127B5F1BF573D4B44 /* Pods_TwitterViratTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwitterViratTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B5BB6F068B0C495A3AB3C2D /* Pods_TwitterViratUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwitterViratUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -184,6 +188,7 @@
 		4A553BC61E98861600222A62 /* TwitterVirat */ = {
 			isa = PBXGroup;
 			children = (
+				4A97E85F1EA4055B0069E328 /* Views */,
 				4A0251521E995647004B732A /* API */,
 				4A0251511E995637004B732A /* ViewControllers */,
 				4A0251501E995630004B732A /* Models */,
@@ -213,6 +218,15 @@
 				4A553BE91E98861600222A62 /* Info.plist */,
 			);
 			path = TwitterViratUITests;
+			sourceTree = "<group>";
+		};
+		4A97E85F1EA4055B0069E328 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4A97E8601EA406470069E328 /* ProfileView.xib */,
+				4A97E8621EA406A60069E328 /* ProfileView.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		6D1CEF374325A9097CF3B4EC /* Frameworks */ = {
@@ -342,6 +356,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A553BD21E98861600222A62 /* LaunchScreen.storyboard in Resources */,
+				4A97E8611EA406470069E328 /* ProfileView.xib in Resources */,
 				4A0251621E99A82C004B732A /* reply.pdf in Resources */,
 				4A553BCF1E98861600222A62 /* Assets.xcassets in Resources */,
 				4A553BCD1E98861600222A62 /* Main.storyboard in Resources */,
@@ -519,6 +534,7 @@
 				4A0251541E995662004B732A /* User.swift in Sources */,
 				4A0251661E99EE4D004B732A /* HamburgerViewController.swift in Sources */,
 				4A02516A1E99F29B004B732A /* MenuCell.swift in Sources */,
+				4A97E8631EA406A60069E328 /* ProfileView.swift in Sources */,
 				4A0251561E99566C004B732A /* Tweet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

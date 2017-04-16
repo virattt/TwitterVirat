@@ -64,7 +64,6 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         }
     }
     
-    
     func onImageClicked(_ sender: UITapGestureRecognizer) {
         print("clicked the image!")
         let tweetIndex = sender.view!.tag
